@@ -35,6 +35,7 @@ async def on_voice_state_update(member, before, after):
         loguru.logger.debug(f"{_member} - After{after}")
 
     if INPUT_USERNAME == _member:
+        bhue.set_light(LIGHT_SOURCE,'on', True)
         if after.self_mute:
             # Red light, 100% brightness
             bhue[LIGHT_SOURCE].hue = 65000
