@@ -14,7 +14,7 @@ INPUT_USERNAME = os.getenv("INPUT_USERNAME")
 LIGHT_SOURCE = [int(i) for i in list(os.getenv("LIGHT_SOURCE"))]
 
 _DEBUG =  os.getenv("DEBUG", False)
-client = Bot(command_prefix="!")
+client = Bot(command_prefix="$")
 
 bhue = Bridge(IP_PHUE, config_file_path=".python_hue")
 bhue.connect()
